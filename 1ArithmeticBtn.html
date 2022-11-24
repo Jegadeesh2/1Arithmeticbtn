@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1ArithmeticBtn</title>
+  </head>
+  <body>
+    <!-- HTML -->
+    <div class="container">
+      <div id="display">0</div>
+      <input
+        type="number"
+        id="valueOne"
+        value=""
+        placeholder="Enter the first number"
+      /><br />
+      <input
+        type="number"
+        id="valueTwo"
+        value=""
+        placeholder="Enter the second number"
+      /><br />
+      <button id="add-btn" onclick="add()">+</button>
+      <button id="sub-btn" onclick="sub()">-</button>
+      <button id="multiply-btn" onclick="multiply()">*</button>
+      <button id="divide-btn" onclick="divide()">/</button>
+    </div>
+
+    <!-- CSS -->
+
+    <style>
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #display {
+        background-color: grey;
+        color: white;
+        width: 23rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        font-size: 40px;
+        padding-left: 10px;
+      }
+      #valueOne {
+        font-size: 30px;
+        margin-bottom: 1rem;
+      }
+      #valueTwo {
+        font-size: 30px;
+        margin-bottom: 1rem;
+      }
+      button {
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 2rem;
+      }
+    </style>
+    
+    <!-- SCRIPT -->
+
+    <script>
+      // Elements
+      let valueOneEle = document.getElementById("valueOne");
+      let valueTwoEle = document.getElementById("valueTwo");
+      let displayEle = document.getElementById("display");
+      //Functions
+      function add() {
+        displayEle.innerText =
+          Number(valueOneEle.value) + Number(valueTwoEle.value);
+      }
+      function sub() {
+        displayEle.innerText =
+          Number(valueOneEle.value) - Number(valueTwoEle.value);
+      }
+      function multiply() {
+        displayEle.innerText =
+          Number(valueOneEle.value) * Number(valueTwoEle.value);
+      }
+      function divide() {
+        displayEle.innerText =
+          Number(valueOneEle.value) / Number(valueTwoEle.value);
+      }
+    </script>
+  </body>
+</html>
